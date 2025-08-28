@@ -1,0 +1,6 @@
+@XocialiveProject_HostAddress = http://localhost:5201
+
+GET {{XocialiveProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
