@@ -1,0 +1,20 @@
+# Visual Studio / .NET
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Aa]rtifacts/
+*.log
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# Others
+*.cache
