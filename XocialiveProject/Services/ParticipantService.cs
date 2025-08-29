@@ -229,5 +229,31 @@ namespace XocialiveProject.Services
 
 			return new ApiResponse<List<ParticipantDto>>(true , "Success" , result);
 		}
+
+		public async Task<ApiResponse<List<Partic_Indiv_Copo>>> GetParticipantIndividualOrCopor()
+		{
+			var participant = await _repository.GetAll();
+
+			if (participant == null)
+				return new ApiResponse<List<Partic_Indiv_Copo>>(false, "The Participants was null");
+
+			var result = participant.Select
+				(
+					x => new Partic_Indiv_Copo
+					{
+						Id = x.Id,
+						FName = x.FName,
+						LName = x.LName,
+						//Organization = x is Coporates ? ((Coporates)x).Company : ((Individuals)x).University
+						Organization = x.GetType() == typeof(Coporates) ? ((Coporates)x).Company : 
+						((Individuals)x).University
+					}
+				).ToList();
+
+			if (result == null)
+				return new ApiResponse<List<Partic_Indiv_Copo>>(false, "The final result was null");
+
+			return new ApiResponse<List<Partic_Indiv_Copo>>(true, "Success", result);
+		}
 	}
 }

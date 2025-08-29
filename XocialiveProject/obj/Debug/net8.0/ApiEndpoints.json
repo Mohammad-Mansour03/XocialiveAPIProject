@@ -538,6 +538,16 @@
   },
   {
     "ContainingType": "XocialiveProject.Controllers.ParticipantController",
+    "Method": "GetChekingParticipant",
+    "RelativePath": "api/Participant/GetIndividualsOrCoporate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XocialiveProject.Controllers.ParticipantController",
     "Method": "GetIndividuals",
     "RelativePath": "api/Participant/InternIndiv",
     "HttpMethod": "GET",

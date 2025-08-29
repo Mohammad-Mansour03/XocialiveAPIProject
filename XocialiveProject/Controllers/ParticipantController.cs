@@ -91,6 +91,16 @@ namespace XocialiveProject.Controllers
 			return BadRequest(result);
 		}
 
+		[HttpGet("GetIndividualsOrCoporate")]
+		public async Task<IActionResult> GetChekingParticipant()
+		{
+			var result = await _participantService.GetParticipantIndividualOrCopor();
+		
+			if(result.Success)
+				return Ok(result.Data);
+
+			return BadRequest(result);
+		}
 
 	}
 }

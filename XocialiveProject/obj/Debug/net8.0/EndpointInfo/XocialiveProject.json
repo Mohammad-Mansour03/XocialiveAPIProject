@@ -854,6 +854,18 @@
         }
       }
     },
+    "/api/Participant/GetIndividualsOrCoporate": {
+      "get": {
+        "tags": [
+          "Participant"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Schedule": {
       "get": {
         "tags": [
