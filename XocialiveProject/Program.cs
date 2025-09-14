@@ -28,6 +28,18 @@ namespace XocialiveProject
             builder.Services.AddApplicationServices(builder.Configuration);
             builder.Services.AddCustomJwtAuth(builder.Configuration);
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin();
+
+                });
+
+            });
+
 
 			builder.Services.AddControllers();
 			builder.Services.AddEndpointsApiExplorer();
@@ -40,7 +52,8 @@ namespace XocialiveProject
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            
+            app.UseCors();
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();

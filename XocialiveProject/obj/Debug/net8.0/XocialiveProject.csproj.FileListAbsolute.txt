@@ -370,12 +370,6 @@ C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets\msbuild.XocialiveProject.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets\msbuild.XocialiveProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets\msbuild.build.XocialiveProject.props
-C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.XocialiveProject.props
-C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.XocialiveProject.props
-C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\Xocialiv.B39F3E20.Up2Date
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\XocialiveProject.dll
@@ -383,3 +377,8 @@ C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\XocialiveProject.pdb
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\XocialiveProject.genruntimeconfig.cache
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\ref\XocialiveProject.dll
+C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\obj\Debug\net8.0\staticwebassets.build.json.cache

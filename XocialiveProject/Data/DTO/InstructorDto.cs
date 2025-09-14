@@ -14,5 +14,6 @@ namespace XocialiveProject.Data.DTO
 		public string LName { get; set; }
 
 		public int ? OfficeId { get; set; }
+		public string ? OfficeName {  get; set; }
 	}
 }

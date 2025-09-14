@@ -1,4 +1,5 @@
-﻿using XocialiveProject.Data.DTO;
+﻿using Microsoft.EntityFrameworkCore;
+using XocialiveProject.Data.DTO;
 using XocialiveProject.IServices;
 using XocialiveProject.Models;
 using XocialiveProject.Repository;
@@ -16,7 +17,7 @@ namespace XocialiveProject.Services
 
 		public async Task<ApiResponse<List<InstructorDto>>> GetAll()
 		{
-			var instructors = await _repository.GetAllAsync();
+			var instructors = await _repository.GetAllAsync(x => x.Include(o => o.Office));
 
 			List<InstructorDto> instructorDtos = new List<InstructorDto>();
 
@@ -29,7 +30,8 @@ namespace XocialiveProject.Services
 							Id = instructor.Id,
 							FName = instructor.FName,
 							LName = instructor.LName,
-							OfficeId = instructor.OfficeId
+							OfficeId = instructor.OfficeId,
+							OfficeName = instructor.Office?.OfficeName ??"There is no Office"
 						}
 					);
 			}
