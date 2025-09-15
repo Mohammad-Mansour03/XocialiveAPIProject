@@ -11,6 +11,7 @@ namespace XocialiveProject.Data.DTO
 		public int CourseId {  get; set; }
 		public int ScheduleId {  get; set; }
 		public int ? InstructorId { get; set; }
+		public string ? InstructorName {  get; set; }
 
 	}
 }

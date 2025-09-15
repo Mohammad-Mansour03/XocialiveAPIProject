@@ -337,6 +337,7 @@ namespace XocialiveProject.Services
 		public async Task<ApiResponse<List<SectionDto>>> GetAllCourseSections(int courseId)
 		{
 			var course = _repository.GetContext().Set<Course>().Include(x => x.Sections)
+				.ThenInclude(i => i.Instructor)
 				.FirstOrDefault(x => x.Id == courseId);
 
 			if (course == null)
@@ -351,8 +352,10 @@ namespace XocialiveProject.Services
 						InstructorId = x.InstructorId,
 						DateSlot = x.DateSlot!,
 						ScheduleId = x.ScheduleId,
-						SectionName= x.SectionName,
-						TimeSlot = x.TimeSlot!
+						SectionName = x.SectionName,
+						TimeSlot = x.TimeSlot!,
+						InstructorName = x.Instructor != null ? x.Instructor.FName + " " +
+						x.Instructor.LName : "No Instructor"
 					}
 				).ToList();
 

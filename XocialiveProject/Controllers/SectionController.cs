@@ -8,7 +8,6 @@ namespace XocialiveProject.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	[Authorize]
 	public class SectionController : ControllerBase
 	{
 		private readonly ISectionService _sectionService;
