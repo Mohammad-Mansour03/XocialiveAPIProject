@@ -16,6 +16,19 @@ namespace XocialiveProject.Controllers
 			_sectionService = sectionService;
 		}
 
+		[HttpGet("SectionsCourse/{courseId}")]
+		public async Task<IActionResult> GetSectionsCourse(int courseId) 
+		{
+			var result = await _sectionService.GetAllCourseSections(courseId);
+		
+			if (result.Success)
+				return Ok(result);
+
+			return BadRequest(result.Message);
+
+		}
+
+
 		[HttpGet]
 		public async Task<IActionResult> GetAllSections()
 		{
@@ -71,10 +84,11 @@ namespace XocialiveProject.Controllers
 			return BadRequest(result);
 		}
 
-		[HttpPost("{participantId}/{sectionId}")]
-		public async Task<IActionResult> Enroll(int participantId, int sectionId)
+		[HttpPost("Enroll")]
+		public async Task<IActionResult> Enroll([FromBody] EnrollmentDto enrollmentDto)
 		{
-			var result = await _sectionService.Enroll(sectionId, participantId);
+			var result = await _sectionService.Enroll(enrollmentDto.SectionId,
+				enrollmentDto.ParticipantId);
 
 			if (result.Success)
 				return Ok(result);

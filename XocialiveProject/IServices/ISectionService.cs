@@ -5,6 +5,7 @@ namespace XocialiveProject.IServices
 	public interface ISectionService
 	{
 		Task<ApiResponse<List<SectionDto>>> GetAllSections();
+		Task<ApiResponse<List<SectionDto>>> GetAllCourseSections(int courseId);
 		Task<ApiResponse<SectionDto>> GetSction(int  sectionId);
 		Task<ApiResponse<SectionDto>> AddSection(SectionDto sectionDto);
 		Task<ApiResponse<SectionDto>> RemoveSection(int sectionId);

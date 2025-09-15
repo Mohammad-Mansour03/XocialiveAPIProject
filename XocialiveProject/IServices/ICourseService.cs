@@ -12,6 +12,7 @@ namespace XocialiveProject.IServices
 		Task<ApiResponse<bool>> Update(CourseDto course);
 		Task<ApiResponse<CourseDto>> Delete(int id);
 
+		Task<ApiResponse<CourseSections>> GetCourseSections(int id);
 		Task<ApiResponse<List<AllCoursesWithTotalNumberOfParticipant>>> GetAllCoursesWithTotalNumOfPartic();
 		Task<ApiResponse<List<AveragePerHours>>> GetAveragePerHours();
 	

@@ -333,6 +333,35 @@ namespace XocialiveProject.Services
 
 			return new ApiResponse<List<SectionDto>>(true , "Success" , result);
 		}
+
+		public async Task<ApiResponse<List<SectionDto>>> GetAllCourseSections(int courseId)
+		{
+			var course = _repository.GetContext().Set<Course>().Include(x => x.Sections)
+				.FirstOrDefault(x => x.Id == courseId);
+
+			if (course == null)
+				return new ApiResponse<List<SectionDto>>(false, "There is no course with this id");
+
+			var sections = course.Sections.Select
+				(
+					x => new SectionDto
+					{
+						CourseId = x.CourseId,
+						Id = x.Id,
+						InstructorId = x.InstructorId,
+						DateSlot = x.DateSlot!,
+						ScheduleId = x.ScheduleId,
+						SectionName= x.SectionName,
+						TimeSlot = x.TimeSlot!
+					}
+				).ToList();
+
+			if (!sections.Any())
+				return new ApiResponse<List<SectionDto>>(true, "There is no any section related to this course");
+
+
+			return new ApiResponse<List<SectionDto>>(true, " ", sections);
+		}
 	}
 
 }

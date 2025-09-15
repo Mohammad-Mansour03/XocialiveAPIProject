@@ -148,7 +148,7 @@ namespace XocialiveProject.Services
 
 		public async Task<ApiResponse<List<IndividualsDto>>> GetIndividuals()
 		{
-			var particpants = await _repository.GetAll();
+			var particpants = await _repository.GetAllAsync();
 
 			var individuals = particpants.OfType<Individuals>()
 				.Where(x => x.IsIntern).Select
@@ -173,7 +173,7 @@ namespace XocialiveProject.Services
 
 		public async Task<ApiResponse<List<TotalSectionsPerParticipant>>> TotalSectionsPerParticipant()
 		{
-			var participants = await _repository.GetAll
+			var participants = await _repository.GetAllAsync
 				(
 					q => q.Include(x => x.Sections)
 				);
@@ -203,7 +203,7 @@ namespace XocialiveProject.Services
 
 		public async Task<ApiResponse<List<ParticipantDto>>> ParticipantWithMaxEnrollments()
 		{
-			var participants = await _repository.GetAll(x => x.Include(s => s.Sections));
+			var participants = await _repository.GetAllAsync(x => x.Include(s => s.Sections));
 
 			if (participants == null)
 				return new ApiResponse<List<ParticipantDto>>(false, "The Participants null");
@@ -232,7 +232,7 @@ namespace XocialiveProject.Services
 
 		public async Task<ApiResponse<List<Partic_Indiv_Copo>>> GetParticipantIndividualOrCopor()
 		{
-			var participant = await _repository.GetAll();
+			var participant = await _repository.GetAllAsync();
 
 			if (participant == null)
 				return new ApiResponse<List<Partic_Indiv_Copo>>(false, "The Participants was null");

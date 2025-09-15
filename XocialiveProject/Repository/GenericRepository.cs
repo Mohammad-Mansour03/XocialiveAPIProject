@@ -24,15 +24,7 @@ namespace XocialiveProject.Repository
 
 			return await query.ToListAsync();
 		}
-		public async Task<List<T>> GetAll(Func<IQueryable<T>, IQueryable<T>>? include = null)
-		{
-			var query =  _dbSet.AsQueryable();
 
-			if (include != null)
-				query = include(query);
-
-			return await query.ToListAsync();
-		}
 
 		public async Task<T?> GetById(int id, Func<IQueryable<T>, IQueryable<T>>? include)
 		{

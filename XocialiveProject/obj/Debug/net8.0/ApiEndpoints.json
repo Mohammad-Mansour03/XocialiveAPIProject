@@ -716,27 +716,6 @@
   },
   {
     "ContainingType": "XocialiveProject.Controllers.SectionController",
-    "Method": "Enroll",
-    "RelativePath": "api/Section/{participantId}/{sectionId}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "participantId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "sectionId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "XocialiveProject.Controllers.SectionController",
     "Method": "UnEnroll",
     "RelativePath": "api/Section/{sectionId}/{participantId}",
     "HttpMethod": "DELETE",
@@ -774,12 +753,44 @@
   },
   {
     "ContainingType": "XocialiveProject.Controllers.SectionController",
+    "Method": "Enroll",
+    "RelativePath": "api/Section/Enroll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enrollmentDto",
+        "Type": "XocialiveProject.Data.DTO.EnrollmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XocialiveProject.Controllers.SectionController",
     "Method": "GetInstructorEachSection",
     "RelativePath": "api/Section/GetInstructors",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XocialiveProject.Controllers.SectionController",
+    "Method": "GetSectionsCourse",
+    "RelativePath": "api/Section/SectionsCourse/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -800,6 +811,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XocialiveProject.Controllers.CourseController",
+    "Method": "GetCourseSections",
+    "RelativePath": "CourseSection/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

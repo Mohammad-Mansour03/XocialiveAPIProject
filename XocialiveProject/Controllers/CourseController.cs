@@ -49,6 +49,18 @@ namespace XocialiveProject.Controllers
 			return BadRequest(result.Message);
 		}
 
+		[HttpGet("/CourseSection/{id}")]
+		public async Task<IActionResult> GetCourseSections(int id) 
+		{
+			var result = await _courseService.GetCourseSections(id);
+
+			if (result.Success)
+				return Ok(result);
+
+			return BadRequest(result.Message);
+		}
+
+
 		[HttpDelete]
 		public async Task<IActionResult> DeleteCourse(int id) 
 		{

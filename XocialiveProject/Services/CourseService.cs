@@ -10,7 +10,6 @@ namespace XocialiveProject.Services
 	public class CourseService :ICourseService
 	{
 		private readonly IGenericRepository<Course> _repository;
-
 		public CourseService(IGenericRepository<Course> _repository)
 		{
 			this._repository = _repository;
@@ -132,7 +131,7 @@ namespace XocialiveProject.Services
 
 		public async Task<ApiResponse<List<AllCoursesWithTotalNumberOfParticipant>>> GetAllCoursesWithTotalNumOfPartic()
 		{
-			var courses = await _repository.GetAll
+			var courses = await _repository.GetAllAsync
 				(
 					x => x.Include(s => s.Sections).ThenInclude(p => p.Particpants)
 				);
@@ -163,7 +162,7 @@ namespace XocialiveProject.Services
 
 		public async Task<ApiResponse<List<AveragePerHours>>> GetAveragePerHours()
 		{
-			var courses = await _repository.GetAll();
+			var courses = await _repository.GetAllAsync();
 
 			if (courses == null)
 				return new ApiResponse<List<AveragePerHours>>(false, "The courses are null");
@@ -183,6 +182,34 @@ namespace XocialiveProject.Services
 				).ToList();
 
 			return new ApiResponse<List<AveragePerHours>>(true, "Success", result);
+		}
+
+		public async Task<ApiResponse<CourseSections>> GetCourseSections(int id)
+		{
+			var course = await _repository.GetById(id , x => x.Include(s => s.Sections));
+
+			if (course == null)
+				return new ApiResponse<CourseSections>(false, "There is no Course has this ID");
+
+			CourseSections courseSections = new CourseSections()
+			{
+				CourseId = course.Id,
+				HoursToComplete = course.HoursToComplete,
+				Price = course.Price,
+				CourseName = course.CourseName,
+				Sections = course.Sections.Select(s => new SectionDto
+				{
+					Id = s.Id,
+					CourseId=course.Id,
+					SectionName = s.SectionName,
+					DateSlot= s.DateSlot!,
+					ScheduleId=s.ScheduleId,
+					TimeSlot = s.TimeSlot!,
+					InstructorId = s.InstructorId
+				}).ToList()
+			};
+
+			return new ApiResponse<CourseSections>(true,"" , courseSections);
 		}
 	}
 }
