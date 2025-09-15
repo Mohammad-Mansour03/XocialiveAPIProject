@@ -96,10 +96,11 @@ namespace XocialiveProject.Controllers
 			return BadRequest(result);
 		}
 
-		[HttpDelete("{sectionId}/{participantId}")]
-		public async Task<IActionResult> UnEnroll(int sectionId, int participantId)
+		[HttpDelete("UnEnroll")]
+		public async Task<IActionResult> UnEnroll(EnrollmentDto enrollmentDto)
 		{
-			var result = await _sectionService.UnEnroll(sectionId, participantId);
+			var result = await _sectionService.UnEnroll(enrollmentDto.SectionId,
+				enrollmentDto.ParticipantId);
 
 			if (result.Success)
 				return Ok(result);

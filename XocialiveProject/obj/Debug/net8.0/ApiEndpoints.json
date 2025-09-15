@@ -716,27 +716,6 @@
   },
   {
     "ContainingType": "XocialiveProject.Controllers.SectionController",
-    "Method": "UnEnroll",
-    "RelativePath": "api/Section/{sectionId}/{participantId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "sectionId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "participantId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "XocialiveProject.Controllers.SectionController",
     "Method": "GetSectionWithParticipant",
     "RelativePath": "api/Section/{sectionId}/Participants",
     "HttpMethod": "GET",
@@ -801,6 +780,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XocialiveProject.Controllers.SectionController",
+    "Method": "UnEnroll",
+    "RelativePath": "api/Section/UnEnroll",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enrollmentDto",
+        "Type": "XocialiveProject.Data.DTO.EnrollmentDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

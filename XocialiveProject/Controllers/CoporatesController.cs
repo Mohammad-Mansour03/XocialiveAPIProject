@@ -35,6 +35,11 @@ namespace XocialiveProject.Controllers
 			return BadRequest(result.Message);
 		}
 
+		//In Primitive Type like (int , double , ...) we must write [FromBody] to tell
+		//The action this parameter will take it from body as Json
+
+		//With Complex Type like (coporateDto) the Asp.Net Core by default will deal with
+		//it from the Body not as Url or Query String
 		[HttpPost]
 		public async Task<IActionResult> Add(CoporateDto coporateDto) 
 		{
