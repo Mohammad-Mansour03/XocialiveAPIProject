@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using XocialiveProject.Data.DTO;
 using XocialiveProject.IServices;
@@ -7,6 +8,7 @@ namespace XocialiveProject.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
+	[Authorize]
 	public class SectionController : ControllerBase
 	{
 		private readonly ISectionService _sectionService;
