@@ -5,7 +5,7 @@ namespace XocialiveProject.Data.DTO
 	public class ScheduleDto
 	{
 		public int Id { get; set; }
-		public ScheduleType ScheduleType { get; set; }
+		public string ? ScheduleType { get; set; }
 		public bool SUN {  get; set; }
 		public bool MON {  get; set; }
 		public bool TUE {  get; set; }

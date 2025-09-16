@@ -1466,7 +1466,8 @@
             "format": "int32"
           },
           "scheduleType": {
-            "$ref": "#/components/schemas/ScheduleType"
+            "type": "string",
+            "nullable": true
           },
           "sun": {
             "type": "boolean"
@@ -1491,17 +1492,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "ScheduleType": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4
-        ],
-        "type": "integer",
-        "format": "int32"
       },
       "SectionDto": {
         "type": "object",

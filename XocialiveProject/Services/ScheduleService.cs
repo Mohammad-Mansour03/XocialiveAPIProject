@@ -33,7 +33,7 @@ namespace XocialiveProject.Services
 				TUE = schedule.TUE,
 				SAT = schedule.SAT,
 				SUN = schedule.SUN,
-				ScheduleType = schedule.ScheduleType
+				ScheduleType = schedule.ScheduleType.ToString()
 			});
 		}
 
@@ -55,7 +55,7 @@ namespace XocialiveProject.Services
 					TUE = schedule.TUE,
 					SAT = schedule.SAT,
 					SUN = schedule.SUN,
-					ScheduleType = schedule.ScheduleType
+					ScheduleType = schedule.ScheduleType.ToString()
 				});	
 			}
 
@@ -76,7 +76,7 @@ namespace XocialiveProject.Services
 				TUE = scheduleDto.TUE,
 				SAT = scheduleDto.SAT,
 				SUN = scheduleDto.SUN,
-				ScheduleType = scheduleDto.ScheduleType
+				ScheduleType = System.Enum.Parse<ScheduleType>(scheduleDto.ScheduleType)
 			};
 
 			var result = await _repository.AddAsync(schedule);
@@ -110,7 +110,7 @@ namespace XocialiveProject.Services
 				TUE = schedule.TUE,
 				SAT = schedule.SAT,
 				SUN = schedule.SUN,
-				ScheduleType = schedule.ScheduleType
+				ScheduleType = schedule.ScheduleType.ToString()
 			};
 
 			var result = _repository.Remove(schedule);
@@ -136,7 +136,8 @@ namespace XocialiveProject.Services
 			schedule.TUE = scheduleDto.TUE;
 			schedule.SAT = scheduleDto.SAT;
 			schedule.SUN = scheduleDto.SUN;
-			schedule.ScheduleType = scheduleDto.ScheduleType;
+			schedule.ScheduleType = System.Enum.Parse<ScheduleType>(scheduleDto.ScheduleType, 
+				ignoreCase: true);
 
 
 			var result = _repository.Update(schedule);
