@@ -1,4 +1,5 @@
-﻿using XocialiveProject.Data.DTO;
+﻿using System.Linq.Expressions;
+using XocialiveProject.Data.DTO;
 using XocialiveProject.IServices;
 using XocialiveProject.Models;
 using XocialiveProject.Repository;
@@ -114,6 +115,71 @@ namespace XocialiveProject.Services
 				return new ApiResponse<bool>(true, "Updated Successfully" , true);
 
 			return new ApiResponse<bool>(false, "There is a problem in the database");
+		}
+
+		private Expression<Func<Office , bool>> ? Filter(string ? search) 
+		{
+			Expression<Func<Office , bool>> ? filter = null;
+
+			if (search != null)
+				filter = o => o.OfficeName.ToLower() == search.ToLower() ||
+				o.OfficeLocation.ToLower() == search.ToLower();
+
+			return filter;
+		}
+
+		private Func<IQueryable<Office> , IOrderedQueryable<Office>> ? Order (string ? orderBy , bool descSort) 
+		{
+			Func<IQueryable<Office> , IOrderedQueryable<Office>> order = null;
+
+			if(orderBy != null)
+			{
+				order = o =>
+				{
+					if (orderBy.ToLower() == "officename")
+						return  descSort ? o.OrderByDescending(x => x.OfficeName) : o.OrderBy(x => x.OfficeName);
+
+					if (orderBy.ToLower() == "officelocation")
+						return descSort ? o.OrderByDescending(x => x.OfficeLocation) : o.OrderBy(x => x.OfficeLocation);
+
+					return descSort ? o.OrderByDescending(x => x.Id) : o.OrderBy(x => x.Id);
+				};
+			}
+
+			return order;
+		}
+
+		public async Task<ApiResponse<List<OfficeDto>>> FilteredOffices(string? search, string? orderBy, 
+			bool descSort = false, int? page = null, int? pageSize = null)
+		{
+			var filter = Filter(search);
+			var order = Order(orderBy, descSort);
+
+			var skip = (page - 1) * pageSize;
+
+			var offices = await _repository.GetData
+				(
+					filter, order, skip, pageSize
+				);
+
+			List<OfficeDto> result = new List<OfficeDto>();
+
+			if (offices.Count > 0)
+			{
+				foreach (var o in offices)
+				{
+					result.Add(new OfficeDto
+					{
+						Id = o.Id,
+						OfficeName = o.OfficeName,
+						OfficeLocation = o.OfficeLocation,
+					});
+				}
+
+				return new ApiResponse<List<OfficeDto>>(true, " ", result);
+			}
+
+			return new ApiResponse<List<OfficeDto>>(false, "There is no any office");
 		}
 	}
 }

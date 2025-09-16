@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XocialiveProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57a9f2fed89b04ba8b61b0f796f551714cfbeef9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4db137f69bdf8108f452efe0d36108e70a7a3092")]
 [assembly: System.Reflection.AssemblyProductAttribute("XocialiveProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XocialiveProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

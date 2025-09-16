@@ -60,7 +60,8 @@ namespace XocialiveProject.Services
 
 			var skip = (page - 1) * pageSize;
 			
-			var particpants = await _repository.GetData(filter , ordering , skip , pageSize);
+			var particpants = await _repository.GetData(filter , 
+				ordering , skip , pageSize);
 
 			List<ParticipantDto> result = new List<ParticipantDto>();
 

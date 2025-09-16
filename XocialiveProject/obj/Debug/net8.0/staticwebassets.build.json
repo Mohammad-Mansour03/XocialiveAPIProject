@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "Vq5NBvLEXxfVsy7KBTIhZLos7bOC+UojzlhYssMGif4=",
-  "Source": "XocialiveProject",
-  "BasePath": "_content/XocialiveProject",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"Vq5NBvLEXxfVsy7KBTIhZLos7bOC+UojzlhYssMGif4=","Source":"XocialiveProject","BasePath":"_content/XocialiveProject","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

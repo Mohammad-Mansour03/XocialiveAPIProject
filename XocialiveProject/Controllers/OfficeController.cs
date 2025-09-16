@@ -78,5 +78,17 @@ namespace XocialiveProject.Controllers
 			return BadRequest(result);
 		}
 
+		[HttpGet("Filter")]
+		public async Task<IActionResult> GetOffices(string ? search , string ? orderBy , bool  desc 
+			, int ? page , int? pageSize )
+		{
+			var result = await _officeService.FilteredOffices(search , orderBy , desc , page , pageSize);
+			
+			if(result.Success)
+				return Ok(result.Data);
+
+			return BadRequest(result);
+			
+		}
 	} 
 }
