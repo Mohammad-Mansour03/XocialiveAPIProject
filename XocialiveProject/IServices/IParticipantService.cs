@@ -7,6 +7,8 @@ namespace XocialiveProject.IServices
 	{
 		Task<ApiResponse<List<ParticipantDto>>> GetAllParticipant(string? search,
 			string? orderBy, bool descSort = false , int ? page = null , int ?pageSize = null);
+
+		Task<ApiResponse<List<ParticipantDto>>> GetAll();
 		Task<ApiResponse<ParticipantDto>> GetParticipant(int id);
 		Task<ApiResponse<List<IndividualsDto>>> GetIndividuals();
 		Task<ApiResponse<ParticipantAndCourses>> GetParticipantWithCourses(int participantId);

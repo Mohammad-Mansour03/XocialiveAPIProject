@@ -15,6 +15,18 @@ namespace XocialiveProject.Controllers
 			_participantService = participantService;
 		}
 
+		[HttpGet("GetAll")]
+		public async Task<IActionResult> GetAll() 
+		{
+			var result = await _participantService.GetAll();
+
+			if(result.Message.Contains("There is no participant"))
+				return Ok(new {result.Message , result.Data});
+
+			return Ok(result.Data);
+		}
+
+
 		[HttpGet("InternIndiv")]
 		public async Task<IActionResult> GetIndividuals() 
 		{

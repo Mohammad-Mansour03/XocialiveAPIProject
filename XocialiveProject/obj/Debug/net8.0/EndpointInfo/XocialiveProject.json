@@ -67,37 +67,6 @@
         }
       }
     },
-    "/api/Account/VerifyOtp": {
-      "post": {
-        "tags": [
-          "Account"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerifyOtpDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerifyOtpDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerifyOtpDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Account/{roleName}": {
       "post": {
         "tags": [
@@ -795,6 +764,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Participant/GetAll": {
+      "get": {
+        "tags": [
+          "Participant"
         ],
         "responses": {
           "200": {
@@ -1634,20 +1615,6 @@
             "nullable": true
           },
           "password": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "VerifyOtpDto": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string",
-            "nullable": true
-          },
-          "otpCode": {
             "type": "string",
             "nullable": true
           }

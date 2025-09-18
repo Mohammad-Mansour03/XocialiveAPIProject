@@ -53,22 +53,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "XocialiveProject.Controllers.AccountController",
-    "Method": "VerifyOtp",
-    "RelativePath": "api/Account/VerifyOtp",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "XocialiveProject.Data.DTO.VerifyOtpDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "XocialiveProject.Controllers.CoporatesController",
     "Method": "GetAll",
     "RelativePath": "api/Coporates",
@@ -582,6 +566,16 @@
     "ContainingType": "XocialiveProject.Controllers.ParticipantController",
     "Method": "GetAllParticipantWithTotalSections",
     "RelativePath": "api/Participant/AllParticipantWithTotalSections",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XocialiveProject.Controllers.ParticipantController",
+    "Method": "GetAll",
+    "RelativePath": "api/Participant/GetAll",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

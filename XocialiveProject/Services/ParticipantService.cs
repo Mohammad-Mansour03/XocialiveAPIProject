@@ -256,5 +256,26 @@ namespace XocialiveProject.Services
 
 			return new ApiResponse<List<Partic_Indiv_Copo>>(true, "Success", result);
 		}
+
+		public async Task<ApiResponse<List<ParticipantDto>>> GetAll()
+		{
+			var participant = await _repository.GetAllAsync();
+
+			if (participant.Count < 0)
+				return new ApiResponse<List<ParticipantDto>>(true, "There is no participant");
+
+			var participantsDto = participant.Select
+				(
+					x =>
+					new ParticipantDto
+					{
+						Id = x.Id,
+						FName = x.FName,
+						LName = x.LName
+					}
+				).ToList();
+
+			return new ApiResponse<List<ParticipantDto>>(true, "", participantsDto);
+		}
 	}
 }
