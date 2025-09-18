@@ -29,6 +29,8 @@ namespace XocialiveProject.Extension
 			services.AddScoped<IParticipantService, ParticipantService>();
 			services.AddScoped<IAccountService, AccountService>();
 			services.AddScoped<IAddRoleService, AddRoleService>();
+			services.AddScoped<IEmailService, EmailService>();
+			services.AddScoped<IOtpService , OtpService>();
 			services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 
 

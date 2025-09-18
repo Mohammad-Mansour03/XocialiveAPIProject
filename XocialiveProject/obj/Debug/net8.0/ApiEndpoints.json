@@ -53,6 +53,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "XocialiveProject.Controllers.AccountController",
+    "Method": "VerifyOtp",
+    "RelativePath": "api/Account/VerifyOtp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "XocialiveProject.Data.DTO.VerifyOtpDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "XocialiveProject.Controllers.CoporatesController",
     "Method": "GetAll",
     "RelativePath": "api/Coporates",

@@ -18,6 +18,8 @@ namespace XocialiveProject.Data
 		public DbSet<Particpant> Particpants { get; set; }
 		public DbSet<Individuals> Individuals { get; set; }
 		public DbSet<Coporates> Coporates { get; set; }
+		public DbSet<OtpCodes> OtpCodes { get; set; }
+		
 
 
 
