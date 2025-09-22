@@ -36,35 +36,36 @@ namespace XocialiveProject.Controllers
 		[HttpPost("Login")]
 		public async Task<IActionResult> Login(LogiDto logiDto)
 		{
+			//var result = await _service.LoginUser(logiDto);
+
+			//if (result.Success)
+			//	return Ok(result.Data);
+
+			//if (result.Message.Contains("Invalid UserName or Passowrd"))
+			//	return Unauthorized(result.Message);
+
+			//return BadRequest(result);
+
+
 			var result = await _service.LoginUser(logiDto);
+
+			if (result.Success)
+				return Ok(new { UserData = result.Data, Message = "OTP sent to your email" });
+
+			return Unauthorized(result.Message);
+		}
+
+		[HttpPost("VerifyOtp")]
+		public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpDto dto)
+		{
+			var result = await _service.VerifyOtp(dto.UserId, dto.OtpCode);
 
 			if (result.Success)
 				return Ok(result.Data);
 
-			if (result.Message.Contains("Invalid UserName or Passowrd"))
-				return Unauthorized(result.Message);
-
-			return BadRequest(result);
-
-
-			//var result = await _service.LoginUser(logiDto);
-
-			//if (result.Success)
-			//	return Ok(new { UserData = result.Data, Message = "OTP sent to your email" });
-
-			//return Unauthorized(result.Message);
+			return Unauthorized(result.Message);
 		}
 
-		//[HttpPost("VerifyOtp")]
-		//public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpDto dto)
-		//{
-		//	var result = await _service.VerifyOtp(dto.UserId, dto.OtpCode);
-
-		//	if (result.Success)
-		//		return Ok(result.Data);
-
-		//	return Unauthorized(result.Message);
-		//}
 		[HttpPost("{roleName}")]
 		public async Task<IActionResult> AddRole(UserDto? user, string roleName)
 		{

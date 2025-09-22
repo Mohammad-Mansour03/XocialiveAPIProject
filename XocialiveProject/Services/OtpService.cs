@@ -23,27 +23,11 @@ namespace XocialiveProject.Services
 			return Task.CompletedTask;
 		}
 
-		private void RemoveExpiryOtp()
-		{
-			var removedData = _context.OtpCodes
-				.Where(x => x.ExpiryDate < DateTime.UtcNow)
-				.ToList();
 
-			if (removedData.Any())
-			{
-				_context.RemoveRange(removedData);
-				_context.SaveChanges();
-			}
-
-		}
 
 
 		public  ApiResponse<bool> ValidateOtpAsync(string userId, string code)
 		{
-
-			RemoveExpiryOtp();
-
-
 
 			var user = _context.OtpCodes.FirstOrDefault(x => x.Id == userId);
 
