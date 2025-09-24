@@ -8,10 +8,12 @@ namespace XocialiveProject.Services
 	public class OtpService : IOtpService
 	{
 		private readonly AppDbContext _context;
+		private readonly ILogger<OtpService> _logger;
 
-		public OtpService(AppDbContext context)
+		public OtpService(AppDbContext context, ILogger<OtpService> logger)
 		{
 			_context = context;
+			_logger = logger;
 		}
 
 		public  Task SaveOtpAsync(string userId, string code, TimeSpan duration)
@@ -24,7 +26,30 @@ namespace XocialiveProject.Services
 		}
 
 
+		public async Task RemoveExpiryOtp() 
+		{
+			var expiryOtp = _context.OtpCodes
+				.Where(x => x.ExpiryDate < DateTime.UtcNow)
+				.ToList();
 
+			if(!expiryOtp.Any() ) 
+			{
+				_logger.LogError("There is no any expiry otp");
+				await Task.CompletedTask;
+			}
+
+			_context.OtpCodes.RemoveRange(expiryOtp);
+			var numOfAffectedRows = await _context.SaveChangesAsync();
+
+			if(numOfAffectedRows <= 0)
+			{
+				_logger.LogWarning("No Any Otp Was Deleted");
+				 await Task.CompletedTask;
+			}
+
+			_logger.LogInformation($"{numOfAffectedRows} Otp Codes Deleted");
+			await Task.CompletedTask;
+		}
 
 		public  ApiResponse<bool> ValidateOtpAsync(string userId, string code)
 		{
@@ -47,5 +72,6 @@ namespace XocialiveProject.Services
 	{
 		Task SaveOtpAsync(string userId, string code, TimeSpan duration);
 		ApiResponse<bool> ValidateOtpAsync(string userId, string code);
+		Task RemoveExpiryOtp();
 	}
 }

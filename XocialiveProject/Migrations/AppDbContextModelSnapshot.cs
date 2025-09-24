@@ -573,7 +573,7 @@ namespace XocialiveProject.Migrations
 
                             b1.HasKey("SectionId");
 
-                            b1.ToTable("Sections");
+                            b1.ToTable("Sections", (string)null);
 
                             b1.WithOwner()
                                 .HasForeignKey("SectionId");
@@ -594,7 +594,7 @@ namespace XocialiveProject.Migrations
 
                             b1.HasKey("SectionId");
 
-                            b1.ToTable("Sections");
+                            b1.ToTable("Sections", (string)null);
 
                             b1.WithOwner()
                                 .HasForeignKey("SectionId");
