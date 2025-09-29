@@ -2,7 +2,6 @@ using Hangfire;
 using Hangfire.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using XocialiveProject.BackgroundServices;
 using XocialiveProject.Data;
 using XocialiveProject.Extension;
 using XocialiveProject.IServices;
@@ -73,7 +72,10 @@ namespace XocialiveProject
 			app.UseHangfireDashboard("/hangfire");
 
 			// Register recurring job
-			OtpBackgroundServices.RemoveOtpService();
+			RecurringJob.AddOrUpdate<IOtpService>(
+				methodCall: x => x.RemoveExpiryOtp(),
+				cronExpression : "*/2 * * * *",
+				recurringJobId:"www");
 
 			app.MapControllers();
 			app.Run();
