@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using XocialiveProject.Data;
+using MoalejilAcademy.Data;
 
-namespace XocialiveProject.Repository
+namespace MoalejilAcademy.Repository
 {
 	public class GenericRepository<T> : IGenericRepository<T> where T : class
 	{

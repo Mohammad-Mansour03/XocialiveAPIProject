@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using XocialiveProject.Entities;
+using MoalejilAcademy.Entities;
 
-namespace XocialiveProject.Data.Configuration
+namespace MoalejilAcademy.Data.Configuration
 {
 	public class OtpCodesConfig : IEntityTypeConfiguration<OtpCodes>
 	{

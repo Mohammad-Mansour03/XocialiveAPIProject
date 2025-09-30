@@ -1,7 +1,7 @@
 ﻿using Hangfire;
-using XocialiveProject.Services;
+using MoalejilAcademy.Services;
 
-namespace XocialiveProject.BackgroundServices
+namespace MoalejilAcademy.BackgroundServices
 {
 	public static class OtpBackgroundServices
 	{

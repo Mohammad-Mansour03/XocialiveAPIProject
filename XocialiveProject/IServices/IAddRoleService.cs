@@ -1,7 +1,7 @@
-﻿using XocialiveProject.Data.DTO;
-using XocialiveProject.Entities;
+﻿using MoalejilAcademy.Data.DTO;
+using MoalejilAcademy.Entities;
 
-namespace XocialiveProject.IServices
+namespace MoalejilAcademy.IServices
 {
 	public interface IAddRoleService
 	{

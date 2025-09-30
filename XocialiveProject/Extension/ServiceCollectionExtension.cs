@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using XocialiveProject.Data;
-using XocialiveProject.Entities;
-using XocialiveProject.IServices;
-using XocialiveProject.Repository;
-using XocialiveProject.Services;
+using MoalejilAcademy.Data;
+using MoalejilAcademy.Entities;
+using MoalejilAcademy.IServices;
+using MoalejilAcademy.Repository;
+using MoalejilAcademy.Services;
 
-namespace XocialiveProject.Extension
+namespace MoalejilAcademy.Extension
 {
 	public static class ServiceCollectionExtension
 	{

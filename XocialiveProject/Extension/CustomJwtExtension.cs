@@ -3,7 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
-namespace XocialiveProject.Extension
+namespace MoalejilAcademy.Extension
 {
 	public static class CustomJwtExtension
 	{

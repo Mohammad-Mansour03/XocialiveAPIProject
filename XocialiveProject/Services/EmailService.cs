@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Net.Mail;
 
-namespace XocialiveProject.Services
+namespace MoalejilAcademy.Services
 {
 	public class EmailService : IEmailService
 	{

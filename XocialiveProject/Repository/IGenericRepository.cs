@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace XocialiveProject.Repository
+namespace MoalejilAcademy.Repository
 {
 	public interface IGenericRepository<T> where T : class
 	{

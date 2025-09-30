@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using XocialiveProject.Enum;
-using XocialiveProject.Models;
+using MoalejilAcademy.Enum;
+using MoalejilAcademy.Models;
 using System;
 using System.Reflection.Emit;
 using System.ComponentModel;
 
-namespace XocialiveProject.Data.Configuration
+namespace MoalejilAcademy.Data.Configuration
 {
 	public class OfficeConfig : IEntityTypeConfiguration<Office>
 	{

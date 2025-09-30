@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using XocialiveProject.Models;
+using MoalejilAcademy.Models;
 
-namespace XocialiveProject.Data.Configuration
+namespace MoalejilAcademy.Data.Configuration
 {
 	public class ScheduleConfig : IEntityTypeConfiguration<Schedule>
 	{

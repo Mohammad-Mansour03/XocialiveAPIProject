@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace XocialiveProject.Entities
+namespace MoalejilAcademy.Entities
 {
 	public class AppUser : IdentityUser
 	{

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Concurrent;
-using XocialiveProject.Data;
-using XocialiveProject.Data.DTO;
-using XocialiveProject.Entities;
+using MoalejilAcademy.Data;
+using MoalejilAcademy.Data.DTO;
+using MoalejilAcademy.Entities;
 
-namespace XocialiveProject.Services
+namespace MoalejilAcademy.Services
 {
 	public class OtpService : IOtpService
 	{

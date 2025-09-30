@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace XocialiveProject.Data.DTO
+namespace MoalejilAcademy.Data.DTO
 {
 	public class RegisterDto
 	{

@@ -6663,9 +6663,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\XocialiveAPIProject\\XocialiveProject\\XocialiveProject.csproj",
-      "projectName": "XocialiveProject",
-      "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\XocialiveAPIProject\\XocialiveProject\\XocialiveProject.csproj",
+      "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\XocialiveAPIProject\\XocialiveProject\\MoalejilAcademy.csproj",
+      "projectName": "MoalejilAcademy",
+      "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\XocialiveAPIProject\\XocialiveProject\\MoalejilAcademy.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\XocialiveAPIProject\\XocialiveProject\\obj\\",
       "projectStyle": "PackageReference",

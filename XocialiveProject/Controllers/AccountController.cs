@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using XocialiveProject.Data.DTO;
-using XocialiveProject.IServices;
-using XocialiveProject.Services;
+using MoalejilAcademy.Data.DTO;
+using MoalejilAcademy.IServices;
+using MoalejilAcademy.Services;
 
-namespace XocialiveProject.Controllers
+namespace MoalejilAcademy.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]

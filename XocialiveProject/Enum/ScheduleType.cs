@@ -1,4 +1,4 @@
-﻿namespace XocialiveProject.Enum
+﻿namespace MoalejilAcademy.Enum
 {
 	public enum ScheduleType
 	{

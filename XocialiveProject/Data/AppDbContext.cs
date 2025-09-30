@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using XocialiveProject.Entities;
-using XocialiveProject.Models;
+using MoalejilAcademy.Entities;
+using MoalejilAcademy.Models;
 
-namespace XocialiveProject.Data
+namespace MoalejilAcademy.Data
 {
 	public class AppDbContext : IdentityDbContext<AppUser>
 	{

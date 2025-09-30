@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Text.Json;
 
-namespace XocialiveProject.Middleware
+namespace MoalejilAcademy.Middleware
 {
 	public class GlobalErrorHandlingMiddleware
 	{

@@ -2,15 +2,15 @@ using Hangfire;
 using Hangfire.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using XocialiveProject.BackgroundServices;
-using XocialiveProject.Data;
-using XocialiveProject.Extension;
-using XocialiveProject.IServices;
-using XocialiveProject.Middleware;
-using XocialiveProject.Repository;
-using XocialiveProject.Services;
+using MoalejilAcademy.BackgroundServices;
+using MoalejilAcademy.Data;
+using MoalejilAcademy.Extension;
+using MoalejilAcademy.IServices;
+using MoalejilAcademy.Middleware;
+using MoalejilAcademy.Repository;
+using MoalejilAcademy.Services;
 
-namespace XocialiveProject
+namespace MoalejilAcademy
 {
 	public class Program
 	{

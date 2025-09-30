@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using XocialiveProject.Data.DTO;
-using XocialiveProject.Entities;
-using XocialiveProject.IServices;
+using MoalejilAcademy.Data.DTO;
+using MoalejilAcademy.Entities;
+using MoalejilAcademy.IServices;
 
-namespace XocialiveProject.Services
+namespace MoalejilAcademy.Services
 {
 	public class AddRoleService :IAddRoleService
 	{

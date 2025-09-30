@@ -1,6 +1,6 @@
-﻿using XocialiveProject.Enum;
+﻿using MoalejilAcademy.Enum;
 
-namespace XocialiveProject.Data.DTO
+namespace MoalejilAcademy.Data.DTO
 {
 	public class ScheduleDto
 	{

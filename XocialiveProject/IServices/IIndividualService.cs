@@ -1,7 +1,7 @@
-﻿using XocialiveProject.Data.DTO;
-using XocialiveProject.Models;
+﻿using MoalejilAcademy.Data.DTO;
+using MoalejilAcademy.Models;
 
-namespace XocialiveProject.IServices
+namespace MoalejilAcademy.IServices
 {
 	public interface IIndividualService
 	{

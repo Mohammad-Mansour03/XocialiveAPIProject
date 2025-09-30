@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace XocialiveProject.Data.DTO
+namespace MoalejilAcademy.Data.DTO
 {
 	public class OfficeDto
 	{

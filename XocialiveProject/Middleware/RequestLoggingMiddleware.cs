@@ -1,4 +1,4 @@
-﻿namespace XocialiveProject.Middleware
+﻿namespace MoalejilAcademy.Middleware
 {
 	public class RequestLoggingMiddleware
 	{

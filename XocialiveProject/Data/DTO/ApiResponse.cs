@@ -1,4 +1,4 @@
-﻿namespace XocialiveProject.Data.DTO
+﻿namespace MoalejilAcademy.Data.DTO
 {
 	public class ApiResponse<T>
 	{

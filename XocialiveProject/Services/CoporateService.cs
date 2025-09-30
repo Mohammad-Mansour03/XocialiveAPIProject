@@ -1,10 +1,10 @@
-﻿using XocialiveProject.Data.DTO;
-using XocialiveProject.IServices;
-using XocialiveProject.Models;
-using XocialiveProject.Repository;
+﻿using MoalejilAcademy.Data.DTO;
+using MoalejilAcademy.IServices;
+using MoalejilAcademy.Models;
+using MoalejilAcademy.Repository;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace XocialiveProject.Services
+namespace MoalejilAcademy.Services
 {
 	public class CoporateService :ICoporateService
 	{

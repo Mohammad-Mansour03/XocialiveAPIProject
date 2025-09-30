@@ -1,4 +1,4 @@
-﻿namespace XocialiveProject.Entities
+﻿namespace MoalejilAcademy.Entities
 {
 	public class Token
 	{

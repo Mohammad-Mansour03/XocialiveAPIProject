@@ -1,6 +1,6 @@
-﻿using XocialiveProject.Models;
+﻿using MoalejilAcademy.Models;
 
-namespace XocialiveProject.Data.DTO
+namespace MoalejilAcademy.Data.DTO
 {
 	public class SectionDto
 	{

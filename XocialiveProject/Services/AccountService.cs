@@ -3,12 +3,12 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using XocialiveProject.Data.DTO;
-using XocialiveProject.Entities;
-using XocialiveProject.IServices;
-using XocialiveProject.Repository;
+using MoalejilAcademy.Data.DTO;
+using MoalejilAcademy.Entities;
+using MoalejilAcademy.IServices;
+using MoalejilAcademy.Repository;
 
-namespace XocialiveProject.Services
+namespace MoalejilAcademy.Services
 {
 	public class AccountService : IAccountService
 	{

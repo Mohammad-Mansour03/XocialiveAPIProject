@@ -1,4 +1,4 @@
-﻿namespace XocialiveProject.Models
+﻿namespace MoalejilAcademy.Models
 {
 	public class Office
 	{

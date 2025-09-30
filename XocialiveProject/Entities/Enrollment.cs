@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace XocialiveProject.Models
+namespace MoalejilAcademy.Models
 {
 	public class Enrollment1
 	{

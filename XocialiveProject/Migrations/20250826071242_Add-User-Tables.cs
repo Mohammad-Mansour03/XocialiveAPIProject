@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace XocialiveProject.Migrations
+namespace MoalejilAcademy.Migrations
 {
     /// <inheritdoc />
     public partial class AddUserTables : Migration

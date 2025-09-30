@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace XocialiveProject.Migrations
+namespace MoalejilAcademy.Migrations
 {
     /// <inheritdoc />
     public partial class AddIndividualAndCoporate : Migration

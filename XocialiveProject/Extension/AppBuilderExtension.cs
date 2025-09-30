@@ -1,6 +1,6 @@
-﻿using XocialiveProject.Middleware;
+﻿using MoalejilAcademy.Middleware;
 
-namespace XocialiveProject.Extension
+namespace MoalejilAcademy.Extension
 {
 	public static class AppBuilderExtension
 	{

@@ -1,6 +1,6 @@
-﻿using XocialiveProject.Data.DTO;
+﻿using MoalejilAcademy.Data.DTO;
 
-namespace XocialiveProject.IServices
+namespace MoalejilAcademy.IServices
 {
 	public interface ISectionService
 	{
