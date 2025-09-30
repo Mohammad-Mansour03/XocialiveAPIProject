@@ -1,0 +1,26 @@
+2025-09-18 11:38:16 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Participant" for actions - XocialiveProject.Controllers.ParticipantController.GetAll (XocialiveProject),XocialiveProject.Controllers.ParticipantController.GetAll (XocialiveProject). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-18 11:38:36 [INF] Http Rquest: GET /api/Participant/GetAll At "2025-09-18T11:38:36.1830719+03:00" 
+2025-09-18 11:38:39 [INF] Http Response: 200 At "2025-09-18T11:38:39.0292399+03:00" 
+2025-09-18 11:43:18 [INF] Http Rquest: POST /api/Account/Login At "2025-09-18T11:43:18.2317209+03:00" 
+2025-09-18 11:43:20 [INF] Http Response: 400 At "2025-09-18T11:43:20.9260963+03:00" 
+2025-09-18 11:44:26 [INF] Http Rquest: POST /api/Account/Login At "2025-09-18T11:44:26.7471258+03:00" 
+2025-09-18 11:46:13 [INF] Http Rquest: POST /api/Account/Login At "2025-09-18T11:46:13.5223972+03:00" 
+2025-09-18 11:47:07 [INF] Http Rquest: POST /api/Account At "2025-09-18T11:47:07.8908743+03:00" 
+2025-09-18 11:47:10 [INF] Http Response: 200 At "2025-09-18T11:47:10.3549513+03:00" 
+2025-09-18 11:47:26 [INF] Http Rquest: POST /api/Account/Login At "2025-09-18T11:47:26.0805192+03:00" 
+2025-09-18 11:47:26 [INF] Http Response: 400 At "2025-09-18T11:47:26.1447573+03:00" 
+2025-09-18 11:47:37 [INF] Http Rquest: POST /api/Account/Login At "2025-09-18T11:47:37.9446326+03:00" 
+2025-09-18 11:48:03 [INF] Http Response: 200 At "2025-09-18T11:48:03.0773599+03:00" 
+2025-09-18 12:00:30 [INF] Http Rquest: GET /api/Participant/GetAll At "2025-09-18T12:00:30.3276973+03:00" 
+2025-09-18 12:00:32 [INF] Http Response: 200 At "2025-09-18T12:00:32.3187059+03:00" 
+2025-09-18 12:29:10 [INF] Http Rquest: GET /api/Participant/4/Courses At "2025-09-18T12:29:10.9554435+03:00" 
+2025-09-18 12:29:13 [INF] Http Response: 400 At "2025-09-18T12:29:13.1502279+03:00" 
+2025-09-18 12:29:19 [INF] Http Rquest: GET /api/Participant/11/Courses At "2025-09-18T12:29:19.7622277+03:00" 
+2025-09-18 12:29:20 [INF] Http Response: 200 At "2025-09-18T12:29:20.0759524+03:00" 
