@@ -7,7 +7,7 @@ namespace XocialiveProject.BackgroundServices
 	{
 		public static void RemoveOtpService() 
 		{
-			RecurringJob.AddOrUpdate<IOtpService>(recurringJobId: "Remove Otp",
+			 RecurringJob.AddOrUpdate<IOtpService>(recurringJobId: "Remove Otp",
 				methodCall: x => x.RemoveExpiryOtp(), cronExpression: "*/2 * * * *");
 		}
 	}

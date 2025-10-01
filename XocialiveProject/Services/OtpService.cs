@@ -36,6 +36,7 @@ namespace XocialiveProject.Services
 			{
 				_logger.LogError("There is no any expiry otp");
 				await Task.CompletedTask;
+				return;
 			}
 
 			_context.OtpCodes.RemoveRange(expiryOtp);
@@ -45,6 +46,7 @@ namespace XocialiveProject.Services
 			{
 				_logger.LogWarning("No Any Otp Was Deleted");
 				 await Task.CompletedTask;
+				return;
 			}
 
 			_logger.LogInformation($"{numOfAffectedRows} Otp Codes Deleted");

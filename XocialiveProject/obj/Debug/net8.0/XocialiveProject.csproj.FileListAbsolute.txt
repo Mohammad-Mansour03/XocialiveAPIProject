@@ -403,3 +403,4 @@ C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\bin
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll
 C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\bin\Debug\net8.0\logs\log20250924.json
+C:\Users\user\OneDrive\Documents\GitHub\XocialiveAPIProject\XocialiveProject\bin\Debug\net8.0\logs\log20251001.json
