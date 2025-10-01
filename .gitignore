@@ -18,3 +18,9 @@ packages/
 
 # Others
 *.cache
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.FileListAbsolute.txt
